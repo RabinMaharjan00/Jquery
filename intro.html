@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Hide</h2>
+
+        <p class="text-danger">If you click on me, I will disappear.</p>
+        <p class="text-warning">Click me away!</p>
+        <p class="text-primary">Click me too!</p>
+    </div>
+
+    <div class="container">
+        <h2>By Id</h2>
+
+        <p>(Click button to hide "P" tag with id test)</p>
+        <p>This is a paragraph.</p>
+        <p id="test">This is another paragraph.</p>
+
+        <button id="b" class="btn btn-primary">Click me</button>
+    </div>
+
+    <div class="container">
+        <h2>Class selector</h2>
+
+        <p>(Click button to hide "P" tag with class test)</p>
+        <p>This is a paragraph.</p>
+        <p class="test">This is another paragraph.</p>
+        <button class="btn btn-danger but3">click me</button>
+    </div>
+
+    <div class="container">
+        <h2>Focuss</h2>
+
+        <p>(Click button to hide "P" tag with class test)</p>
+        <p>This is a paragraph.</p>
+        <p class="para">This is another paragraph.</p>
+    </div>
+
+    <div class="container">
+        <h2>Hide/Show</h2>
+        <p>If you click on the "Hide" button, I will disappear.</p>
+
+        <button id="toggle">Toggle</button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("p").click(function(e) {
+                e.preventDefault();
+                $(this).hide();
+            });
+            $("#b").click(function() {
+                $("#test").hide();
+            });
+
+            $(".but3").click(function() {
+                $(".test").css("font-size", "50px");
+            });
+            $("p").dblclick(function() {
+                $(this).hide();
+            });
+            $("#test").mouseenter(function() {
+                alert("You entered p1!");
+            });
+
+            $(".para").on("click", function() {
+                $(this).css("color", "blue");
+            });
+            $("#toggle").click(function() {
+                $("p").toggle();
+            });
+        });
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
